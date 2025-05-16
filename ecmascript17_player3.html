@@ -100,7 +100,14 @@
       <img src="img/album1.jpg" alt="">
     </div>
     <div class="volume">
-      <span class="volumeBar"></span>
+      <span id="volume_btn1" class="material-icons" >volume_up</span>
+      <span id="volume_btn2" class="material-icons" >volume_down</span>
+      <span id="volume_btn3" class="material-icons" >volume_off</span>
+      <div class="volume_ctrl">
+        <div class="volumebg">
+          <input type="range" min="0" max="100" value="50" step="1" class="volumerange">
+        </div>
+      </div>
     </div>
     <div class="info">
       <p class="name">Alone</p>
@@ -271,7 +278,17 @@
     }
     listLoad();
 
-  
+    const volUpBtn = musicApp.querySelector('#volume_btn1');
+    const volDownBtn = musicApp.querySelector('#volume_btn2');
+    const volOffBtn = musicApp.querySelector('#volume_btn3');
+
+    document.getElementById('volume_up').addEventListener('click',()=>{
+      if(music.volume<1){
+        music.volume=
+      }
+    });
+
+
   </script>
 </body>
 </html>
